@@ -13,7 +13,7 @@ feature 'user can search form for a specific food' do
     # And I click "Search"
     expect(current_path).to eq(foods_path)
     # Then I should be on page "/foods"
-    expect(page).to have_content("38680 results")
+    expect(page).to have_content("358117 results")
     # Then I should see a total of the number of items returned by the search.
     expect(page).to have_css('.foods', count: 10)
     # Then I should see a list of ten foods that contain the ingredient "sweet potatoes"

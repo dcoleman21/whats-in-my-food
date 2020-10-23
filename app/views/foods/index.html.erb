@@ -1,1 +1,9 @@
-<h1><%= @foods.count %> results</h1>
+<h1><%= @total_hits %> results</h1>
+<% @foods.each do |food| %>
+  <section class='foods'>
+    <p class='gtinUpc'><%= food.upc %></p>
+    <p class='description'><%= food.description %></p>
+    <p class='brandOwner'><%= food.company %></p>
+    <p class='ingredients'><%= food.ingredients %></p>
+  </section>
+<% end %>

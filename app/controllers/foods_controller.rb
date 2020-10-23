@@ -1,5 +1,7 @@
 class FoodsController < ApplicationController
   def index
-    @foods = FoodFacade.foods_by_keyword(params[:foods])
+    results = FoodFacade.foods_by_keyword(params[:foods])
+    @foods      = results[1]
+    @total_hits = results[0]
   end
 end
